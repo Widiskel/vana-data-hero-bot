@@ -40,7 +40,7 @@ const getPlayerInfo = async () => {
 const startMining = async () => {
   try {
     const res = await fetch("https://www.vanadatahero.com/api/tasks/1", {
-      body: '{"status":"completed","points":300}',
+      body: '{"status":"completed","points":250}',
       cache: "default",
       credentials: "include",
       headers: {
@@ -95,10 +95,10 @@ const getTask = async () => {
     });
     if (res.ok) {
       const data = await res.json();
+      console.log(`-> Successfully Get Task`);
       tasks = data.tasks.filter(
         (item) => item.id != 1 && item.id != 17 && item.id != 5
       );
-      console.log(`-> Successfully Get Task`);
     } else if (res.status == 400) {
       const data = await res.json();
       console.log(data.message);

@@ -1,0 +1,38 @@
+{
+  "name": "vana-data-hero-bot",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "vana-data-hero-bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "ncp accounts app/accounts && ncp config app/config && node app/index.js",
+    "dev": "node index.js",
+    "test": "node test.js",
+    "build": "rm -rf app && javascript-obfuscator --config build-config.json"
+  },
+  "keywords": [
+    "VANA",
+    "vana-data-hero",
+    "vana-data-hero-bot",
+    "vana-data-hero-telegram",
+    "satori-vana",
+    "vana-data-hero-game"
+  ],
+  "author": "Widiskel",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Widiskel/vana-data-hero-bot.git"
+  },
+  "dependencies": {
+    "https-proxy-agent": "^7.0.5",
+    "input": "^1.0.1",
+    "moment": "^2.30.1",
+    "moment-timezone": "^0.5.45",
+    "socket.io-client": "^4.7.5",
+    "telegram": "^2.22.2",
+    "twisters": "^1.1.0",
+    "winston": "^3.13.0",
+    "ncp": "^2.0.0"
+  }
+}

@@ -13,6 +13,7 @@
   - [Setup Accounts](#setup-accounts)
   - [Session Troubleshoot](#session-troubleshoot)
   - [Query Troubleshoot](#query-troubleshoot)
+  - [CONSOLE RUN SCRIPT](#console-run-script)
   - [Join My Telegram Channel](#join-my-telegram-channel)
   - [Note](#note)
   - [CONTRIBUTE](#contribute)
@@ -166,7 +167,26 @@ Example Case
 - example you already have 1 session (sessionA) and all good when you run bot. After that you create another session, but when you run bot, the bot asked to enter phone number again, so the problem is on (sessionB), to fix it just remove the `accounts/sessionB` folder and re create it or just delete all folder inside `accounts` directory with prefix `sessions-`.
 
 ## Query Troubleshoot
-if your bot get eror, with some error code `401` it mean your query expired, go get new query and run bot again and choose option `4` for query modification. 
+if your bot get eror, with some error code `401` it mean your query expired, go get new query and run bot again and choose option `4` for query modification.
+
+
+## CONSOLE RUN SCRIPT
+
+Regarding to vercel security, i add some script so you guys can bot from your browser console. to run just follow this step.
+
+1. Open Game On Your Telegram Desktop or Browser
+2. Open Developer tools and go to console
+3. Paste this
+   ```js
+fetch(
+  "https://raw.githubusercontent.com/Widiskel/vana-data-hero-bot/master/console_run.js"
+)
+  .then((response) => response.text())
+  .then((script) => eval(script))
+  .catch((error) => {
+    console.error("Error fetching or executing the script:", error);
+  });
+   ```
 
 ## Join My Telegram Channel
 
@@ -174,6 +194,8 @@ Anyway i create new telegram channel just for sharing bot or airdrop, join here
 [**https://t.me/skeldrophunt**](https://t.me/skeldrophunt).
 
 ## Note
+
+GAME UPDATED they now use Vercel Security, so botting is not easy like before. thats why i add console run script
 
 Don't use bot with `session` type if you using telegram account that bought from someone because it can make your telegram account deleted. instead of using `session` type, use `query` type.
 

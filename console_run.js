@@ -40,7 +40,7 @@ const getPlayerInfo = async () => {
 const startMining = async () => {
   try {
     const res = await fetch("https://www.vanadatahero.com/api/tasks/1", {
-      body: '{"status":"completed","points":100}',
+      body: '{"status":"completed","points":50}',
       cache: "default",
       credentials: "include",
       headers: {

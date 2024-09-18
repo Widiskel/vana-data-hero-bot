@@ -175,7 +175,7 @@ if your bot get eror, with some error code `401` it mean your query expired, go 
 Regarding to vercel security, i add some script so you guys can bot from your browser console. to run just follow this step.
 
 1. Open Game On Your Telegram Desktop or Browser
-2. Open Developer tools and go to console
+2. Open Developer Tools / Inspect Element and go to console
 3. Paste this
    ```
    fetch("https://raw.githubusercontent.com/Widiskel/vana-data-hero-bot/master/console_run.js")

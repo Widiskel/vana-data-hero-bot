@@ -214,8 +214,11 @@ const runScript = async () => {
 
   const totalTime = 30 * 60 * 1000;
   let elapsedTime = 0;
+  const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
   while (elapsedTime < totalTime) {
     console.log(`Delaying for 20 Seconds Before Tapping...`);
+    await delay(20000);
     await startMining();
     elapsedTime += 20000;
   }

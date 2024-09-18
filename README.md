@@ -177,15 +177,13 @@ Regarding to vercel security, i add some script so you guys can bot from your br
 1. Open Game On Your Telegram Desktop or Browser
 2. Open Developer tools and go to console
 3. Paste this
-   ```js
-fetch(
-  "https://raw.githubusercontent.com/Widiskel/vana-data-hero-bot/master/console_run.js"
-)
-  .then((response) => response.text())
-  .then((script) => eval(script))
-  .catch((error) => {
-    console.error("Error fetching or executing the script:", error);
-  });
+   ```
+   fetch("https://raw.githubusercontent.com/Widiskel/vana-data-hero-bot/master/console_run.js")
+      .then((response) => response.text())
+      .then((script) => eval(script))
+      .catch((error) => {
+        console.error("Error fetching or executing the script:", error);
+      });
    ```
 
 ## Join My Telegram Channel

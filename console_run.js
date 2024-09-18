@@ -94,7 +94,8 @@ const getTask = async () => {
       referrerPolicy: "strict-origin-when-cross-origin",
     });
     if (res.ok) {
-      tasks = res.tasks.filter(
+      const data = await res.json();
+      tasks = data.tasks.filter(
         (item) => item.id != 1 && item.id != 17 && item.id != 5
       );
       console.log(`-> Successfully Get Task`);
@@ -225,3 +226,18 @@ const runScript = async () => {
 };
 
 runScript();
+
+/**
+ * 
+ * RUN WITH 
+ * 
+ * fetch(
+  "https://raw.githubusercontent.com/Widiskel/vana-data-hero-bot/master/console_run.js"
+)
+  .then((response) => response.text())
+  .then((script) => eval(script))
+  .catch((error) => {
+    console.error("Error fetching or executing the script:", error);
+  });
+ * 
+ */

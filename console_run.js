@@ -31,7 +31,7 @@ const getPlayerInfo = async () => {
       const data = await res.json();
       console.log(data.message);
     } else {
-      console.log(`-> Error Get Player Info`);
+      console.log(`-> Error Get Player Info : ${res.status}-${res.statusText}`);
     }
   } catch (error) {
     console.log(error);
@@ -40,7 +40,7 @@ const getPlayerInfo = async () => {
 const startMining = async () => {
   try {
     const res = await fetch("https://www.vanadatahero.com/api/tasks/1", {
-      body: '{"status":"completed","points":250}',
+      body: '{"status":"completed","points":100}',
       cache: "default",
       credentials: "include",
       headers: {
@@ -65,7 +65,7 @@ const startMining = async () => {
       const data = await res.json();
       console.log(data.message);
     } else {
-      console.log(`-> Error Start Mining`);
+      console.log(`-> Error Start Mining : ${res.status}-${res.statusText}`);
     }
   } catch (error) {
     console.log(error);
@@ -103,7 +103,7 @@ const getTask = async () => {
       const data = await res.json();
       console.log(data.message);
     } else {
-      console.log(`-> Error Get Tasks`);
+      console.log(`-> Error Get Tasks : ${res.status}-${res.statusText}`);
     }
   } catch (error) {
     console.log(error);
@@ -142,7 +142,9 @@ const completeAndClaimTask = async (task) => {
       const data = await res.json();
       console.log(data.message);
     } else {
-      console.log(`-> Failed to Complete task ${task.name}`);
+      console.log(
+        `-> Failed to Complete task ${task.name} : ${res.status}-${res.statusText}`
+      );
     }
   } catch (error) {
     console.log(error);
@@ -216,10 +218,11 @@ const runScript = async () => {
   let elapsedTime = 0;
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+  startMining();
   while (elapsedTime < totalTime) {
     console.log(`Delaying for 20 Seconds Before Tapping...`);
     await delay(20000);
-    await startMining();
+    startMining();
     elapsedTime += 20000;
   }
 

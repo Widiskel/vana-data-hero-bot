@@ -130,7 +130,7 @@ const completeAndClaimTask = async (task) => {
           sessionStorage.getItem("__telegram__initParams")
         ).tgWebAppData,
       },
-      method: "GET",
+      method: "POST",
       mode: "cors",
       redirect: "follow",
       referrer: "https://www.vanadatahero.com/home",

@@ -37,7 +37,7 @@ next RDAT, they create new blockchain called VANA
 - Git
 - Node JS
 - TELEGRAM_APP_ID & TELEGRAM_APP_HASH Get it from [Here](https://my.telegram.org/auth?to=apps) (REQUIRED IF YOU WANT USE SESSIONS)
-- VANA DATA HERO Account , Create [Here](https://t.me/VanaDataHeroBot/VanaDataHero?startapp=5703822759) join and claim join reward
+- VANA DATA HERO Account , Create [Here](https://t.me/VanaDataHeroBot/VanaDataHero?startapp=1788252631) join and claim join reward
 
 ## BOT FEATURE
 
